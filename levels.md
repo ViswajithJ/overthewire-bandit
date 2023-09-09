@@ -421,7 +421,7 @@ Password for level 25 - p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d
 Tuff one
 
 - Given: ssh privatekey for bandit26 is given in home directory.
- 	   shell for bandit26 is not /bin/bash.
+ 	     shell for bandit26 is not /bin/bash.
 When logged in using ssh and private key, it immediately logs out.
 Tried passing commands along with ssh command to no avail.
 Checked /etc/passwd file from bandit25's shell. Found out the shell for bandit26 user is /usr/bin/showtext
@@ -441,3 +441,23 @@ read an external file, using `:r` command inside vi.
 	- `:r /etc/bandit_pass/bandit26` (Inside vi)
 
 Password for level 26 - c7GvcKlw9mC7aUQaPx7nwFstuAIBw1o1
+
+<h2>🔰 Level - 26</h2>
+
+- username - bandit26
+- password - c7GvcKlw9mC7aUQaPx7nwFstuAIBw1o1
+
+There was a bandit27-do, a setuid file in home directory for bandit26. 
+Logged in to bandit26 like in previous level. 
+Entered `v` to open v within `more` .
+Then used vi commands to set shell back to /bin/bash. Now normal bash commands would work
+Executed the setuid binary to `cat` the passkey file from the `/etc/bandit_pass` directory.
+
+- Commands used:-
+	- `:set shell=/bin/bash`
+	- `:!ls`
+	- `:!./bandit27-do`
+	- `:!./bandit27-do cat /etc/bandit_pass/bandit27`
+
+Password for level 27 - YnQpBuifNMas1hcUFk70ZmqkhUU2EuaS
+	
