@@ -489,8 +489,7 @@ Password for level 28 - AVanL161y9rsbcJIsFHuw35rjaOM19nR
 
 Similar to the previous file. Instead of password, the contents of readme were :-
 
-Bandit Notes
-Some notes for level29 of bandit.
+Bandit Notes<br>Some notes for level29 of bandit.<br>
 credentials
 - username: bandit29
 - password: xxxxxxxxxx
@@ -502,3 +501,52 @@ So I tried git log to see other commits and indeed there it was, the previous co
 	- `git log`
 
 Password for level 29 - tQKvmcwNYcFS6vmPHIUSI3ShmsrQZK8S
+
+<h2>🔰 Level - 29</h2>
+
+- username - bandit29
+- password - tQKvmcwNYcFS6vmPHIUSI3ShmsrQZK8S
+
+Given info were same as previous level.
+
+Nothing on git log.
+Looked throught the .git directory.
+Inside a file called packed refs, three branch names where given 
+`13e735685c73e5e396252074f2dca2e415fbcc98 refs/remotes/origin/dev`
+`4bd5389f9f2b9e96ba517aa751ee58d051905761 refs/remotes/origin/master`
+`fae3e4378dba026bbe36655a6d5991c180662187 refs/remotes/origin/sploits-dev`
+
+The second one was the current head.
+I checked out to the dev branch. In that branch, the README contained the flag.
+(Nothing in the 3rd branch, btw)
+
+- Commands used:-
+	- `git checkout 13e735685c73e5e396252074f2dca2e415fbcc98`
+
+Password for level 30 - xbhV3HpNGlTIdnjUrdAlPzc2L6y9EOnS
+
+<h2>🔰 Level - 30</h2>
+
+- username - bandit30
+- password - xbhV3HpNGlTIdnjUrdAlPzc2L6y9EOnS
+
+Given info same as above
+Inside packed-refs file, theres main branch and this new reference
+`831aac2e2341f009e40e46392a4f5dd318483019 refs/tags/secret`
+
+But I couldn't checkout to that. It said its not a tree.
+
+Treaded through some git commands (that I came know of now)
+and finally `git show` command got me the password.
+
+- Commands used:-
+	- `git log -p` (shows all commits and changes included)
+	- `git fetch --all --tags` (fetches all tags from the remote repo and add as a file "FETCHED_HEAD" to .git)
+	- `git checkout -b <new-branch-name>` (to create a new branch)
+	- `git checkout <branchname>` (to checkout to a specific branch)
+	- `git switch -` (to switch back to previous branch)
+	- `git branch -a` ( to list all branches)
+	- `git show <object-name>` (to show all about a branch or a tag or an object) (this got me the password)
+		- `git show-ref` (to show all references)
+
+Password for level 31 - OoffzGDlzhAlerFJ2cAiz1D41JW1Mhmt
