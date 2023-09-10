@@ -459,5 +459,46 @@ Executed the setuid binary to `cat` the passkey file from the `/etc/bandit_pass`
 	- `:!./bandit27-do`
 	- `:!./bandit27-do cat /etc/bandit_pass/bandit27`
 
-Password for level 27 - YnQpBuifNMas1hcUFk70ZmqkhUU2EuaS
-	
+Password for level 27 - YnQpBuifNMas1hcUFk70ZmqkhUU2EuaS	
+
+
+<h2>🔰 Level - 27</h2>
+
+- username - bandit27
+- password - YnQpBuifNMas1hcUFk70ZmqkhUU2EuaS
+
+A link to a git repo was given.
+`ssh://bandit27-git@localhost/home/bandit27-git/repo`
+We should clone the repo as bandit27-git (same password as bandit27) using port 2220 and get our flag.
+
+I tried the normal `git clone command` but didn't. Said some issues with permissions.
+I didnt how to specify port in this command. Also my home direcotory didnt have write permissions.
+So I had to make a temp dir in /tmp.
+
+So when I specified the port to be used is 2220, cloning was successfully done. Inside the repo was a readme file with the flag.
+
+- Commands used:- 
+	- `git clone ssh://bandit27-git@localhost:2220/home/bandit27-git/repo` 
+
+Password for level 28 - AVanL161y9rsbcJIsFHuw35rjaOM19nR
+
+<h2>🔰 Level - 28</h2>
+
+- username - bandit28
+- password - AVanL161y9rsbcJIsFHuw35rjaOM19nR
+
+Similar to the previous file. Instead of password, the contents of readme were :-
+
+# Bandit Notes
+Some notes for level29 of bandit.
+credentials
+- username: bandit29
+- password: xxxxxxxxxx
+
+It was evident that there was a password and they must have changed it. (Prolly).
+So I tried git log to see other commits and indeed there it was, the previous commit replaced the password string with 
+`xxxxxxxxxx`
+- Commands used :-
+	- `git log`
+
+Password for level 29 - tQKvmcwNYcFS6vmPHIUSI3ShmsrQZK8S
