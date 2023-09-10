@@ -489,7 +489,7 @@ Password for level 28 - AVanL161y9rsbcJIsFHuw35rjaOM19nR
 
 Similar to the previous file. Instead of password, the contents of readme were :-
 
-# Bandit Notes
+Bandit Notes
 Some notes for level29 of bandit.
 credentials
 - username: bandit29
