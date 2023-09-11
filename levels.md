@@ -550,3 +550,26 @@ and finally `git show` command got me the password.
 		- `git show-ref` (to show all references)
 
 Password for level 31 - OoffzGDlzhAlerFJ2cAiz1D41JW1Mhmt
+
+<h2>🔰 Level - 31</h2>
+
+- username - bandit31
+- password - OoffzGDlzhAlerFJ2cAiz1D41JW1Mhmt
+
+This time, we are supposed to create, commit and push a new file to the said repository.
+Did that and the passward was in the returned messages
+
+- Commands used:-
+	- `cat > key.txt`
+	- `git add key.txt`
+	- `git commit -m "Add key.txt"`
+	- `git push origin master`
+
+Password for the level 32 - rmCBvG56y58BXzv98yZGdO7ATVL5dW8y
+
+<h2>🔰 Level - 32</h2>
+
+- username - bandit32
+- password - rmCBvG56y58BXzv98yZGdO7ATVL5dW8y
+
+
