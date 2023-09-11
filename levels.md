@@ -572,4 +572,31 @@ Password for the level 32 - rmCBvG56y58BXzv98yZGdO7ATVL5dW8y
 - username - bandit32
 - password - rmCBvG56y58BXzv98yZGdO7ATVL5dW8y
 
+Given that this level is an escape challenge
 
+Login runs a custom shell `uppershell`
+Its a setuid kinda file, it takes all commads in UPPERCASE only. if any commands is passed, it would return, 'permission denied'. Commands like $SHELL, $PATH etc works fine.
+
+`sh: 1: WHOAMI: Permission denied` - this is the output .
+here, we see that sh is the acutall shell used to run the command and command we give is capitalized and passed as parameter to it. '1' here is the parameter position of our command (that we pass)
+so 0 will be the position of actual script running, i.e., `sh` here.
+
+Tried `$0` command. It gave a `sh` shell. Then cat out the password from etc/bandit_pass	
+
+- Commands used :-
+	- `$SHELL`
+	- `$PATH`
+	- `$0`
+
+Password for level 33 - odHo63fHiFqcWWJG9rLiLDtPm45KzUKy
+
+<h2>🔰 Level - 32</h2>
+
+- username - bandit33
+- password - odHo63fHiFqcWWJG9rLiLDtPm45KzUKy
+
+Inside the home directory was a README.txt file saying there are no more levels to play in this game :(
+
+Let's wait
+
+Note: Level 34 doesn't exist as of now.
